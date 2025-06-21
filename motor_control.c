@@ -28,7 +28,7 @@ void PWM_Init(void) {
 
     TIM1->BDTR |= TIM_BDTR_MOE;
 
-    // 7. Enable timer
+    //  Enable timer
     TIM1->CR1 |= TIM_CR1_CEN;
 }
 
