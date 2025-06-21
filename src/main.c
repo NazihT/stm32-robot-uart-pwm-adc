@@ -5,7 +5,7 @@
 #include <string.h>
 #include "adc.h"
  uint16_t speed;
-void shittydelay()
+void shittydelay()        // will implement a timer interrupt instead of this soon 
 {
 	for (volatile int i=0;i<1000000;i++)
 	{
@@ -24,20 +24,20 @@ int main()
 
         	if (command_ready) {
         	        control_car((char*)uart2_rx_buffer);
-        	        uart2_rx_buffer[0] = '\0';  // Clear buffer
-        	        command_ready = 0;          // Clear flag
+        	        uart2_rx_buffer[0] = '\0';  
+        	        command_ready = 0;          
         	    }
         	 char adc_value[20];
-
-        	    while (1) {
-        	        snprintf(adc_value, sizeof(adc_value), "ADC: %u\r\n", ADC_Value);
-        	        USART2_Send(adc_value);
-
-
+                 snprintf(adc_value, sizeof(adc_value), "ADC: %u\r\n", ADC_Value);
+        	 USART2_Send(adc_value);
+		 shittydelay();       
+		
 
 
 
-	}
+
+
+	
 }
 }
 
