@@ -19,11 +19,11 @@ This is a bare-metal STM32F407 robot control project. The robot is driven by an 
 /Src
 ├── main.c    # Main loop and command parsing
 ├── uart.c    # UART initialization and interrupt handler
-├── pwm.c     # PWM setup and motor control
+├── motor_control.c     # PWM setup and motor control
 ├── adc.c     # ADC + DMA configuration
 /Inc
 ├── uart.h
-├── pwm.h
+├── motor_control.h
 ├── adc.h
 ```
 
