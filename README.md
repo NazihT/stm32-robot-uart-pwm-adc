@@ -15,4 +15,14 @@ This is a bare-metal STM32F407 robot control project. The robot is driven by an 
 
 ## 📁 Code Structure
 
-<pre><code>```text /Src ├── main.c # Main loop and command parsing ├── uart.c # UART initialization and interrupt handler ├── pwm.c # PWM setup and motor control ├── adc.c # ADC + DMA configuration /Inc ├── uart.h ├── pwm.h ├── adc.h ``` </code></pre>
+/Src
+├── main.c # Main loop and command parsing
+├── uart.c # UART initialization and interrupt handler
+├── pwm.c # PWM setup and motor control
+├── adc.c # ADC + DMA configuration
+/Inc
+├── uart.h
+├── pwm.h
+├── adc.h
+
+
